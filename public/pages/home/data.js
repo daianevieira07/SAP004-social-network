@@ -61,7 +61,7 @@ export const saveImage = (nameFile, file) => {
   postImage
     .put(file)
     .then((snapshot) => {
-      console.log('photo publicada' + snapshot);
+      console.log(`photo publicada ${snapshot}`);
     })
     .catch((error) => {
       const errorObject = new ErrorDictionary(error);
@@ -79,7 +79,7 @@ export function deletePost(postId) {
     .doc(postId)
     .delete()
     .then(() => {
-      console.log('apagou ' + postId);
+      console.log(`apagou ${postId}`);
     })
     .catch((error) => {
       const errorObject = new ErrorDictionary(error);
@@ -100,18 +100,18 @@ export const savePostEdit = (postId, editedText) => {
     });
 };
 
-export function saveLike(postId, user_id) {
+export function saveLike(postId, userId) {
   const postCollection = firebase.firestore().collection('posts');
-  const arrayUserAdd = firebase.firestore.FieldValue.arrayUnion(user_id);
-  const arrayUserDlt = firebase.firestore.FieldValue.arrayRemove(user_id);
+  const arrayUserAdd = firebase.firestore.FieldValue.arrayUnion(userId);
+  const arrayUserDlt = firebase.firestore.FieldValue.arrayRemove(userId);
 
   postCollection
     .doc(postId)
     .get()
-    .then(function (doc) {
-      console.log('clicou like, post Id: ' + postId);
+    .then(function callBackCompareUser(doc) {
+      console.log(`clicou like, post Id: ${postId}`);
 
-      if (doc.data().user_like.includes(user_id)) {
+      if (doc.data().user_like.includes(userId)) {
         postCollection
           .doc(postId)
           .update({
