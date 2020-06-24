@@ -551,35 +551,34 @@ button {
   margin-bottom: 5em;
 }
 
-/*************************************************/
 
 .container {
-  display: block;
-  position: relative;
-  padding-left: 35px;
   cursor: pointer;
+  display: block;
   font-size: 22px;
-  -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
+  padding-left: 35px;
+  position: relative;
   user-select: none;
+  -webkit-user-select: none;
 }
 
 .container input {
-  position: absolute;
-  opacity: 0;
   cursor: pointer;
   height: 0;
+  opacity: 0;
+  position: absolute;
   width: 0;
 }
 
 .checkmark {
+  background-color: #a97b75;
+  height: 25px;
+  left: 0;
   position: absolute;
   top: 0;
-  left: 0;
-  height: 25px;
   width: 25px;
-  background-color: #a97b75;
 }
 
 .container:hover input~.checkmark {
@@ -592,8 +591,8 @@ button {
 
 .checkmark:after {
   content: '';
-  position: absolute;
   display: none;
+  position: absolute;
 }
 
 .container input:checked~.checkmark:after {
@@ -601,15 +600,15 @@ button {
 }
 
 .container .checkmark:after {
-  left: 9px;
-  top: 5px;
-  width: 5px;
-  height: 10px;
   border: solid black;
   border-width: 0 3px 3px 0;
-  -webkit-transform: rotate(45deg);
+  height: 10px;
+  left: 9px;
   -ms-transform: rotate(45deg);
+  top: 5px;
   transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  width: 5px;
 }
 
 @media only screen and (min-width:768px) and (max-width:900px) {
@@ -650,8 +649,9 @@ button {
   }
 
   .span-style {
-    width: 50%;
     font-size: 2.40em;
+    width: 50%;
+
   }
 
   .profile-img {
@@ -659,8 +659,8 @@ button {
   }
 
   .bio-container {
-    display: flex;
     align-items: center;
+    display: flex;
     flex: 1;
   }
 
@@ -717,11 +717,11 @@ button {
   }
 
   .btns-post-container {
+    align-items: center;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     font-size: 1em;
-    align-items: center;
     justify-content: space-between;
   }
 
@@ -735,9 +735,9 @@ button {
   }
 
   .icons {
+    color: beige;
     font-size: 3vw;
     text-align: center;
-    color: beige;
   }
 
   .top-nav {
@@ -753,9 +753,9 @@ button {
   }
 
   .ul-style {
+    font-size: 1em;
     justify-content: space-evenly;
     padding-bottom: 0.3em;
-    font-size: 1em;
   }
 
   .footer-style {
@@ -767,11 +767,11 @@ button {
 
 @media only screen and (min-width:901px) {
   .img-feed {
-    width: 50%;
+    align-items: center;
     height: 5%;
     object-fit: fill;
-    align-items: center;
     padding-right: 4em;
+    width: 50%;
   }
 
   .main-style {
