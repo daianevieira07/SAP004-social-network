@@ -1,6 +1,8 @@
 /* global firebase */
 
-import { ErrorDictionary } from './error.js';
+import {
+  ErrorDictionary
+} from './error.js';
 
 export const createPost = (textPost, tagOption, privacyOption, url) => {
   const date = new Date();
