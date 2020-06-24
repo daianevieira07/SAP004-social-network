@@ -19,7 +19,6 @@
   flex: 1;
   flex-direction: column;
   flex-wrap: nowrap;
-  font-family: "Gloria Hallelujah";
   padding: 1em;
   text-align: center;
   display: flex;
@@ -348,11 +347,6 @@ button {
 
   display: flex;
   align-items: center;
-  /*   align-items: center;
-  display: flex;
-  justify-content: center;
-  width: 40%; */
-
 }
 
 .profile-img {
@@ -535,7 +529,6 @@ button {
   width: 82vw;
 }
 
-/********************************/
 .cover-container {
   display: none;
 }
@@ -573,7 +566,6 @@ button {
 }
 
 .container input {
-  font: "Gloria Hallelujah";
   position: absolute;
   opacity: 0;
   cursor: pointer;
@@ -664,7 +656,6 @@ button {
 
   .profile-img {
     padding: 1.5em;
-    /* width: 20%; */
   }
 
   .bio-container {
@@ -821,12 +812,10 @@ button {
     margin-bottom: 20px;
   }
 
-  /********************************/
   .cover-img {
-
-    object-fit: cover;
     cursor: pointer;
     width: 100%;
+    object-fit: cover;
   }
 
   .cover-img:hover {
