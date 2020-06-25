@@ -9,7 +9,8 @@ teste teste teste .icon-del {
   width: 100%;
 }
 
-.icons-text, .icons {
+.icons-text,
+.icons {
   color: beige;
 }
 
@@ -23,7 +24,8 @@ teste teste teste .icon-del {
   display: flex;
 }
 
-select, button {
+select,
+button {
   cursor: pointer;
 }
 
@@ -38,7 +40,8 @@ select, button {
   border: none;
 }
 
-.about-style-rules, .about-style-tags {
+.about-style-rules,
+.about-style-tags {
   background-color: #A97B75;
   border: solid #8c0f54;
   border-radius: 30px;
@@ -117,7 +120,8 @@ select, button {
   height: 20px;
 }
 
-.email-input, .password-input {
+.email-input,
+.password-input {
   border-color: #ba7fc2;
   border-radius: 30px;
   height: 30px;
@@ -162,25 +166,25 @@ select, button {
 }
 
 .btn-display {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 
 .form-profile input[type=submit] {
-    background-color: #A97B75;
-    border-color: #A97B75;
-    color: #fff;
-    margin-left: 5px;
-    width: 120px;
+  background-color: #A97B75;
+  border-color: #A97B75;
+  color: #fff;
+  margin-left: 5px;
+  width: 120px;
 }
 
 .form-profile input[type=button] {
-    background-color: #A97B75;
-    border-color: #A97B75;
-    color: #fff;
-    margin-left: 5px;
-    width: 120px;
+  background-color: #A97B75;
+  border-color: #A97B75;
+  color: #fff;
+  margin-left: 5px;
+  width: 120px;
 }
 
 .body-style {
@@ -210,7 +214,8 @@ select, button {
   transition: 0.3s;
 }
 
-.side-nav a:hover, .offcanvas a:focus {
+.side-nav a:hover,
+.offcanvas a:focus {
   color: #8c0f54;
 }
 
@@ -227,6 +232,7 @@ select, button {
   overflow: hidden;
   position: fixed;
   width: 100%;
+  max-height: 12%;
   top: 0;
 }
 
@@ -277,6 +283,7 @@ select, button {
   background-color: #a97b75;
   bottom: 0;
   margin: 0;
+  max-height: 10%;
   overflow: hidden;
   padding-bottom: 5px;
   padding-top: 10px;
@@ -374,7 +381,7 @@ select, button {
   margin: 10px;
 }
 
-.alert-comment{
+.alert-comment {
   border: 1px solid red !important;
 }
 
@@ -396,10 +403,10 @@ select, button {
 }
 
 .delete-comment-btn {
-    color: #A97B75;
-    font-size: 2vw;
-    text-align: center;
-    text-decoration: none;
+  color: #A97B75;
+  font-size: 2vw;
+  text-align: center;
+  text-decoration: none;
 }
 
 .text-style {
@@ -548,7 +555,7 @@ select, button {
   flex-direction: column;
   flex-wrap: nowrap;
   text-align: center;
-  margin-bottom: 5em;
+  margin: 2em 0 5em 0;
 }
 
 .container {
@@ -615,13 +622,16 @@ select, button {
     padding-left: 3em;
     width: 40vw;
   }
+
   .span-style {
     font-size: 2.4em;
     padding: 1em;
   }
+
   .fa-bars:before {
     font-size: 1.3em;
   }
+
   #open-sidebar {
     align-items: center;
     display: flex;
@@ -629,70 +639,88 @@ select, button {
     margin: 15px;
     padding: 0;
   }
+
   .profile-container {
     justify-content: flex-end;
   }
+
   .figure-style {
     width: 100%;
     z-index: 1;
   }
+
   #girly-img {
     width: 11vw;
     z-index: 1;
   }
+
   .span-style {
     font-size: 2.40em;
     width: 50%;
   }
+
   .profile-img {
     padding: 1.5em;
   }
+
   .bio-container {
     align-items: center;
     display: flex;
     flex: 1;
   }
+
   .bio-infos {
     align-items: flex-start;
     width: 60%;
   }
+
   .feed-style {
     align-items: center;
     display: flex;
     flex-wrap: nowrap;
     justify-content: start;
   }
+
   .feed-container {
     align-items: center;
     display: flex;
     flex-direction: column;
     width: 60%;
   }
+
   .post-box {
     width: 45vw;
   }
+
   .publication-box {
     width: 50vw;
   }
+
   .publi-title-span {
     text-align: center;
     width: 90%;
   }
+
   .btn-style {
     margin: 0.6em;
     padding: 2%;
   }
+
   .btn-style:hover {
     background: rgb(166, 157, 216);
     transform: translate(0em, 0.75em);
   }
+
   .publication-title {
     margin-top: 0;
     width: 48.7vw;
   }
-  .publication-title, .ul-style a {
+
+  .publication-title,
+  .ul-style a {
     display: flex;
   }
+
   .btns-post-container {
     align-items: center;
     display: flex;
@@ -701,6 +729,7 @@ select, button {
     font-size: 1em;
     justify-content: space-between;
   }
+
   .publication-btns {
     align-items: center;
     flex: 1;
@@ -709,25 +738,31 @@ select, button {
     justify-content: space-evenly;
     margin-bottom: 0.5em;
   }
+
   .icons {
     color: beige;
     font-size: 3vw;
     text-align: center;
   }
+
   .top-nav {
     height: 10vw;
   }
+
   .top-nav a {
     font-size: 1.2em;
   }
+
   .bottom-nav a {
     margin: 0;
   }
+
   .ul-style {
     font-size: 1em;
     justify-content: space-evenly;
     padding-bottom: 0.3em;
   }
+
   .footer-style {
     display: flex;
     flex-direction: row;
@@ -743,19 +778,23 @@ select, button {
     padding-right: 4em;
     width: 50%;
   }
+
   .main-style {
     padding-top: 2em;
     display: flex;
     justify-content: center;
   }
+
   .text-style {
     text-align: center;
   }
+
   .span-style {
     font-size: 2em;
     margin: 5px;
     width: auto;
   }
+
   .feed-style {
     align-items: flex-start;
     display: flex;
@@ -763,9 +802,11 @@ select, button {
     width: 70%;
     justify-content: center;
   }
+
   #girly-img {
     width: 20%;
   }
+
   .cover-container {
     display: flex;
     flex-direction: column;
@@ -773,28 +814,34 @@ select, button {
     overflow: hidden;
     margin-bottom: 20px;
   }
+
   .cover-img {
     cursor: pointer;
     width: 100%;
     object-fit: cover;
   }
+
   .cover-img:hover {
     opacity: 0.5;
     transition: 0.5s;
   }
+
   .profile-container {
     width: 50%;
   }
+
   .feed-container {
     align-items: center;
     display: flex;
     flex-direction: column;
     width: 60%;
   }
+
   .bio-container {
     align-items: center;
     flex: 1;
   }
+
   .bio-style {
     border: solid #8c0f54;
     border-radius: 30px;
@@ -803,55 +850,71 @@ select, button {
     margin-top: 1em;
     overflow: hidden;
   }
+
   .bio-infos {
     flex: 1;
   }
-  .post-box, .form-container {
+
+  .post-box,
+  .form-container {
     width: 35vw;
   }
+
   .form-style {
     width: 100%;
   }
+
   .textarea-style {
     padding: 1em;
     width: 33vw;
   }
+
   .publication-title {
     width: 37.4vw;
   }
-  .publication-box, .all-posts-box {
+
+  .publication-box,
+  .all-posts-box {
     width: 38vw;
   }
+
   .img-feed-container {
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
     justify-content: center;
   }
+
   .publication-btns {
     flex-direction: row-reverse;
     flex-wrap: nowrap;
     justify-content: space-evenly;
   }
+
   .btn-container {
     justify-content: space-evenly;
   }
+
   .btn-style {
     padding: 2px;
     margin: 0.6em;
   }
+
   .ul-style {
     font-size: 0.8em;
   }
+
   .ul-style li {
     margin: 0;
     width: 100%;
   }
+
   .ul-style a {
     justify-content: space-between;
     margin: 10px;
     margin-bottom: 2px;
   }
+
   .top-nav {
     align-items: center;
     flex-direction: row;
@@ -861,15 +924,19 @@ select, button {
     padding-top: 10px;
     position: fixed;
   }
+
   .nav-style {
     width: 40%;
   }
+
   .nav-ul {
     overflow: hidden;
   }
+
   .hidden-nav {
     display: none;
   }
+
   .bottom-nav {
     background-color: none;
     bottom: auto;
@@ -880,10 +947,12 @@ select, button {
     width: 60%;
     z-index: 1;
   }
+
   .icons {
     font-size: 1em;
     text-align: center;
   }
+
   .container-login {
     border: 10px;
     display: flex;
@@ -892,12 +961,14 @@ select, button {
     text-align: center;
     width: 100%;
   }
+
   .logo-img {
     height: auto;
     max-height: 2000px;
     max-width: 1200px;
     width: 400px;
   }
+
   .title {
     color: #8c0f54;
     display: inline-flex;
@@ -907,13 +978,16 @@ select, button {
     margin-bottom: 20px;
     margin-top: 60px;
   }
-  .email-input, .password-input {
+
+  .email-input,
+  .password-input {
     border-color: rgb(186, 127, 194);
     border-radius: 30px;
     height: 30px;
     margin: 5px 0 5px 0;
     width: 200px;
   }
+
   .login-btn {
     background-color: #A97B75;
     border-color: #A97B75;
@@ -921,15 +995,18 @@ select, button {
     height: 30px;
     width: 150px;
   }
+
   .footer-style {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     bottom: auto;
   }
+
   .icons-text {
     font-size: 0.7em;
   }
+
   .side-nav {
     z-index: 1;
   }
