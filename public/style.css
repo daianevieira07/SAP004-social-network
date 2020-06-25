@@ -2,6 +2,24 @@ teste teste teste .icon-del {
   color: #8c0f54;
 }
 
+.btn-accept-style {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  background: beige;
+  border: 2px solid beige;
+  border-radius: 1em;
+  color: black;
+  margin: 0.2em;
+  padding: 0.5em;
+  transform-style: preserve-3d;
+  transition: all 175ms cubic-bezier(0, 0, 1, 1);
+}
+
+.container-confirm-gender {
+  display: flex;
+}
+
 .nova-class-icon {
   display: flex;
   justify-content: space-evenly;
@@ -31,7 +49,7 @@ button {
 
 .ul-about li {
   list-style-position: inside;
-  list-style-type: "*";
+  list-style-type: '*';
   text-align: center;
   text-align: justify;
 }
@@ -42,7 +60,7 @@ button {
 
 .about-style-rules,
 .about-style-tags {
-  background-color: #A97B75;
+  background-color: #a97b75;
   border: solid #8c0f54;
   border-radius: 30px;
   color: black;
@@ -130,7 +148,7 @@ button {
 }
 
 .login-btn {
-  background-color: #A97B75;
+  background-color: #a97b75;
   border-color: #8c0f54;
   border-radius: 30px;
   height: 30px;
@@ -170,18 +188,17 @@ button {
   justify-content: space-between;
 }
 
-
-.form-profile input[type=submit] {
-  background-color: #A97B75;
-  border-color: #A97B75;
+.form-profile input[type='submit'] {
+  background-color: #a97b75;
+  border-color: #a97b75;
   color: #fff;
   margin-left: 5px;
   width: 120px;
 }
 
-.form-profile input[type=button] {
-  background-color: #A97B75;
-  border-color: #A97B75;
+.form-profile input[type='button'] {
+  background-color: #a97b75;
+  border-color: #a97b75;
   color: #fff;
   margin-left: 5px;
   width: 120px;
@@ -231,6 +248,7 @@ button {
   flex-wrap: nowrap;
   overflow: hidden;
   position: fixed;
+  max-height: 12%;
   width: 100%;
   max-height: 12%;
   top: 0;
@@ -256,6 +274,7 @@ button {
   align-items: center;
   display: flex;
   justify-content: center;
+  max-height: 5em;
 }
 
 .figure-style {
@@ -271,7 +290,7 @@ button {
 
 .span-style {
   color: beige;
-  font-size: 2.0em;
+  font-size: 2em;
   width: 70%;
 }
 
@@ -283,7 +302,7 @@ button {
   background-color: #a97b75;
   bottom: 0;
   margin: 0;
-  max-height: 10%;
+  max-height: 5em;
   overflow: hidden;
   padding-bottom: 5px;
   padding-top: 10px;
@@ -386,7 +405,7 @@ button {
 }
 
 .textarea-comment {
-  background-color: #FFFAFA;
+  background-color: #fffafa;
   border: double gray;
   border-radius: 1em;
   border-style: solid #8c0f54;
@@ -403,7 +422,7 @@ button {
 }
 
 .delete-comment-btn {
-  color: #A97B75;
+  color: #a97b75;
   font-size: 2vw;
   text-align: center;
   text-decoration: none;
@@ -449,8 +468,8 @@ button {
 }
 
 .img-check {
-  background: #A97B75;
-  border: 2px solid #A97B75;
+  background: #a97b75;
+  border: 2px solid #a97b75;
 }
 
 #btn-ver-mais {
@@ -462,8 +481,8 @@ button {
 }
 
 .btn-style {
-  background: #A97B75;
-  border: 2px solid #A97B75;
+  background: #a97b75;
+  border: 2px solid #a97b75;
   border-radius: 1em;
   color: beige;
   margin: 0.2em;
@@ -527,7 +546,7 @@ button {
 }
 
 .publication-title {
-  background-image: linear-gradient(to bottom, #C3C0ED, #95D4E7, #BDD9CA);
+  background-image: linear-gradient(to bottom, #c3c0ed, #95d4e7, #bdd9ca);
   display: flex;
   justify-content: space-between;
   margin-top: 0;
@@ -588,7 +607,7 @@ button {
 }
 
 .container:hover input~.checkmark {
-  background-color: #C3C0ED;
+  background-color: #c3c0ed;
 }
 
 .container input:checked~.checkmark {
@@ -617,7 +636,7 @@ button {
   width: 5px;
 }
 
-@media only screen and (min-width:768px) and (max-width:900px) {
+@media only screen and (min-width: 768px) and (max-width: 900px) {
   .img-feed {
     padding-left: 3em;
     width: 40vw;
@@ -655,7 +674,7 @@ button {
   }
 
   .span-style {
-    font-size: 2.40em;
+    font-size: 2.4em;
     width: 50%;
   }
 
@@ -770,7 +789,7 @@ button {
   }
 }
 
-@media only screen and (min-width:901px) {
+@media only screen and (min-width: 901px) {
   .img-feed {
     align-items: center;
     height: 5%;
@@ -989,8 +1008,8 @@ button {
   }
 
   .login-btn {
-    background-color: #A97B75;
-    border-color: #A97B75;
+    background-color: #a97b75;
+    border-color: #a97b75;
     border-radius: 30px;
     height: 30px;
     width: 150px;
