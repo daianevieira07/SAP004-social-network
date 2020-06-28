@@ -1,3 +1,4 @@
+/* eslint-disable no-shadow */
 /* eslint-disable no-restricted-syntax */
 /* eslint-disable no-param-reassign */
 /* global firebase, document */
@@ -100,18 +101,20 @@ const clearAriaCurrent = () => {
   }
 };
 
-const blockTag = () => {
+const blockTag = (tagValueBlock) => {
   const select = document.getElementById('select-id');
   if (!select) {
     return;
   }
-  if (!tagValue) {
+  if (!tagValueBlock) {
     const keyTags = ['home', 'geek', 'tech', 'autocuidado', 'seguranca', 'oportunidades'];
     select.innerHTML = '';
     for (const key of keyTags) {
       const keyValidated = key === 'home' ? '' : key;
       select.innerHTML += `<option value="${keyValidated}">${tags[key][0]}</option>`;
     }
+  } else {
+    select.innerHTML = `<option value="${tagValueBlock}">${tags[tagValueBlock][0]}</option>`;
   }
 };
 
@@ -133,14 +136,14 @@ const btnPost = (event) => {
 
   const postText = document.getElementById('post-text').value;
   const tag = document.getElementById('select-id');
-  tagValue = tag.options[tag.selectedIndex].value;
+  const tagValuePost = tag.options[tag.selectedIndex].value;
   const checkBox = document.getElementById('privacy-check').checked;
   const photoFile = document.getElementById('input-photo');
 
   if (photoFile.value) {
     postPhoto(photoFile)
       .then((url) => {
-        createPost(postText, tagValue, checkBox, url);
+        createPost(postText, tagValuePost, checkBox, url);
         document.getElementById('post-text').value = '';
 
         photoFile.value = '';
@@ -150,7 +153,7 @@ const btnPost = (event) => {
         console.log(error);
       });
   } else if (postText) {
-    createPost(postText, tagValue, checkBox, '');
+    createPost(postText, tagValuePost, checkBox, '');
     document.getElementById('post-text').value = '';
   }
   if (!privacy) {
@@ -212,22 +215,17 @@ const comments = (querySnapshot, postId) => {
   firebase.auth().onAuthStateChanged((user) => {
     div.innerHTML = '';
     querySnapshot.forEach((doc) => {
-      div.innerHTML += `
-                <div class="container-comment">
+      const commentHtml =
+        user.uid === doc.data().idUser
+          ? `<a data-postcomment=${doc.id} href="#" class="delete-comment-btn"> <i data-id=${doc.id} data-post-id=${postId} class="fas fa-trash-alt" aria-hidden="true"></i></a>`
+          : '';
+      div.innerHTML += `<div class="container-comment">
                     <p class="textarea-comment">${doc.data().name}: ${doc.data().comment}
                     </p>
-                    
-                    ${
-                      user.uid === doc.data().idUser
-                        ? `
-                                <a data-postcomment=${doc.id} href="#" class="delete-comment-btn">
-                                    <i data-id=${doc.id} data-post-id=${postId} class="fas fa-trash-alt" aria-hidden="true"></i>
-                                </a>
-                            `
-                        : ''
-                    }
+                    ${commentHtml}
                 </div>`;
     });
+
     const list = document.getElementsByClassName('delete-comment-btn');
 
     for (const item of list) {
@@ -431,9 +429,11 @@ const blockPrivacyBox = (lock) => {
 };
 
 const tagFilter = (event) => {
+  // debugger;
   limit = 5;
   const elementName = event.target.localName;
-  if (elementName !== 'li') {
+
+  if (elementName !== 'li' && elementName !== 'ul') {
     clearAriaCurrent();
     if (elementName === 'span') {
       tagValue = event.target.parentElement.parentElement.name;
@@ -442,23 +442,20 @@ const tagFilter = (event) => {
       tagValue = event.target.parentElement.name;
       event.target.parentElement.ariaCurrent = 'page';
     }
-    clearFeed();
-    blockTag();
-    loadPosts(clearFeed, showPosts, tagValue, limit);
-  }
 
-  if (tagValue === 'privados') {
-    privacy = true;
-    blockPrivacyBox(true);
-    blockTag();
     clearLimits();
-    loadPosts(clearFeed, showPosts, '', limit, privacy);
-  } else {
-    privacy = false;
-    blockPrivacyBox(false);
-    blockTag();
-    clearLimits();
-    loadPosts(clearFeed, showPosts, tagValue, limit);
+    clearFeed();
+    if (tagValue === 'privados') {
+      privacy = true;
+      blockPrivacyBox(true);
+      blockTag();
+      loadPosts(clearFeed, showPosts, '', limit, privacy);
+    } else {
+      privacy = false;
+      blockPrivacyBox(false);
+      blockTag(tagValue);
+      loadPosts(clearFeed, showPosts, tagValue, limit);
+    }
   }
 };
 

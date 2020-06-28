@@ -14,6 +14,7 @@ teste teste teste .icon-del {
   padding: 0.5em;
   transform-style: preserve-3d;
   transition: all 175ms cubic-bezier(0, 0, 1, 1);
+  font-weight: bold;
 }
 
 .container-confirm-gender {
@@ -56,6 +57,18 @@ button {
 
 .about-style-girly {
   border: none;
+}
+
+.policy-alert {
+  background-color: #a97b75;
+  border: solid #8c0f54;
+  border-radius: 30px;
+  color: black;
+  font-size: 1em;
+  padding: 1em;
+  width: 70vw;
+  text-align: center;
+  font-weight: bold;
 }
 
 .about-style-rules,
@@ -485,6 +498,7 @@ button {
   border: 2px solid #a97b75;
   border-radius: 1em;
   color: beige;
+  font-weight: bold;
   margin: 0.2em;
   padding: 0.5em;
   transform-style: preserve-3d;
@@ -787,6 +801,10 @@ button {
     flex-direction: row;
     justify-content: space-evenly;
   }
+
+  .policy-alert {
+    width: 50vw;
+  }
 }
 
 @media only screen and (min-width: 901px) {
@@ -795,7 +813,7 @@ button {
     height: 5%;
     object-fit: fill;
     padding-right: 4em;
-    width: 50%;
+    width: 80%;
   }
 
   .main-style {
@@ -1028,5 +1046,9 @@ button {
 
   .side-nav {
     z-index: 1;
+  }
+
+  .policy-alert {
+    width: 30vw;
   }
 }
